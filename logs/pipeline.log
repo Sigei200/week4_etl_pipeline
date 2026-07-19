@@ -1,0 +1,442 @@
+2026-07-18 23:40:38,647 - INFO - ==================================================
+2026-07-18 23:40:38,647 - INFO - Pipeline started at 2026-07-18 23:40:38.647339
+2026-07-18 23:40:38,678 - INFO - Extracted 4969 records
+2026-07-18 23:40:38,679 - INFO - Columns: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-18 23:40:38,679 - INFO - Starting with 4969 records
+2026-07-18 23:40:38,694 - INFO - After cleaning: 4969 records
+2026-07-18 23:40:38,695 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-18 23:40:38,711 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-18 23:40:38,742 - INFO - Loaded 4969 records to sales_data
+2026-07-18 23:40:38,742 - INFO - Completed! Processed 4969 records
+2026-07-18 23:40:38,742 - INFO - Finished at 2026-07-18 23:40:38.742897
+2026-07-18 23:40:38,742 - INFO - ==================================================
+2026-07-18 23:46:05,504 - INFO - ==================================================
+2026-07-18 23:46:05,504 - INFO - Pipeline started at 2026-07-18 23:46:05.504287
+2026-07-18 23:46:05,504 - INFO - Created .env file with default settings
+2026-07-18 23:46:05,514 - INFO - Loaded environment variables
+2026-07-18 23:46:05,514 - INFO - Starting extraction...
+2026-07-18 23:46:05,514 - INFO - Found file at: D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-18 23:46:05,529 - INFO - Extracted 4969 records from D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-18 23:46:05,530 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-18 23:46:05,530 - INFO - Starting transformation...
+2026-07-18 23:46:05,530 - INFO - Original data shape: (4969, 11)
+2026-07-18 23:46:05,543 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-18 23:46:05,543 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-18 23:46:05,547 - INFO - After removing duplicates: 4969 records
+2026-07-18 23:46:05,549 - INFO - After removing all-null rows: 4969 records
+2026-07-18 23:46:05,550 - INFO - After removing null in timestamp: 4969 records
+2026-07-18 23:46:05,556 - INFO - Converted timestamp to datetime
+2026-07-18 23:46:05,558 - INFO - Converted date to datetime
+2026-07-18 23:46:05,563 - INFO - Converted Zone to numeric
+2026-07-18 23:46:05,566 - INFO - Converted Shift to numeric
+2026-07-18 23:46:05,566 - INFO - Transformation complete. Final records: 4969
+2026-07-18 23:46:05,566 - INFO - Starting data validation...
+2026-07-18 23:46:05,570 - INFO - Column Zone: min=nan, max=nan, mean=nan
+2026-07-18 23:46:05,570 - INFO - Column Shift: min=nan, max=nan, mean=nan
+2026-07-18 23:46:05,570 - INFO - Column Pressure_PSI: min=120.02963124727086, max=279.9586035612948, mean=200.14
+2026-07-18 23:46:05,570 - INFO - Column Temperature_C: min=45.004745796434, max=84.99570666820196, mean=64.93
+2026-07-18 23:46:05,571 - INFO - Column Flow_Rate_LPM: min=600.0074367804677, max=1399.755865096956, mean=999.61
+2026-07-18 23:46:05,571 - INFO - Validation checks completed
+2026-07-18 23:46:05,571 - INFO - Starting load...
+2026-07-18 23:46:05,625 - INFO - Table cleared and loaded with 4969 records
+2026-07-18 23:46:05,625 - INFO - Load completed successfully
+2026-07-18 23:46:05,625 - INFO - Pipeline completed successfully
+2026-07-18 23:46:05,625 - INFO - Total records processed: 4969
+2026-07-18 23:46:05,625 - INFO - Execution time: 0:00:00.121229
+2026-07-18 23:46:05,625 - INFO - ==================================================
+2026-07-19 08:14:32,890 - INFO - ==================================================
+2026-07-19 08:14:32,891 - INFO - Pipeline started at 2026-07-19 08:14:32.890987
+2026-07-19 08:14:32,892 - INFO - Loaded environment variables
+2026-07-19 08:14:32,892 - INFO - Starting extraction...
+2026-07-19 08:14:32,892 - INFO - Found file at: D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:14:32,920 - INFO - Extracted 4969 records from D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:14:32,921 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 08:14:32,921 - INFO - Starting transformation...
+2026-07-19 08:14:32,921 - INFO - Original data shape: (4969, 11)
+2026-07-19 08:14:32,946 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-19 08:14:32,948 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-19 08:14:32,960 - INFO - After removing duplicates: 4969 records
+2026-07-19 08:14:32,962 - INFO - After removing all-null rows: 4969 records
+2026-07-19 08:14:32,963 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 08:14:32,969 - INFO - Converted timestamp to datetime
+2026-07-19 08:14:32,971 - INFO - Converted date to datetime
+2026-07-19 08:14:32,976 - INFO - Converted Zone to numeric
+2026-07-19 08:14:32,980 - INFO - Converted Shift to numeric
+2026-07-19 08:14:32,980 - INFO - Transformation complete. Final records: 4969
+2026-07-19 08:14:32,980 - INFO - Starting data validation...
+2026-07-19 08:14:32,983 - INFO - Column Zone: min=nan, max=nan, mean=nan
+2026-07-19 08:14:32,983 - INFO - Column Shift: min=nan, max=nan, mean=nan
+2026-07-19 08:14:32,984 - INFO - Column Pressure_PSI: min=120.02963124727086, max=279.9586035612948, mean=200.14
+2026-07-19 08:14:32,984 - INFO - Column Temperature_C: min=45.004745796434, max=84.99570666820196, mean=64.93
+2026-07-19 08:14:32,984 - INFO - Column Flow_Rate_LPM: min=600.0074367804677, max=1399.755865096956, mean=999.61
+2026-07-19 08:14:32,984 - INFO - Validation checks completed
+2026-07-19 08:14:32,984 - INFO - Starting load...
+2026-07-19 08:14:33,038 - INFO - Table cleared and loaded with 4969 records
+2026-07-19 08:14:33,038 - INFO - Load completed successfully
+2026-07-19 08:14:33,038 - INFO - Pipeline completed successfully
+2026-07-19 08:14:33,038 - INFO - Total records processed: 4969
+2026-07-19 08:14:33,038 - INFO - Execution time: 0:00:00.147330
+2026-07-19 08:14:33,038 - INFO - ==================================================
+2026-07-19 08:19:25,275 - INFO - ==================================================
+2026-07-19 08:19:25,275 - INFO - Pipeline started at 2026-07-19 08:19:25.275617
+2026-07-19 08:19:25,276 - INFO - Loaded environment variables
+2026-07-19 08:19:25,276 - INFO - Starting extraction...
+2026-07-19 08:19:25,276 - INFO - Found file at: D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:19:25,292 - INFO - Extracted 4969 records from D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:19:25,293 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 08:19:25,293 - INFO - Starting transformation...
+2026-07-19 08:19:25,293 - INFO - Original data shape: (4969, 11)
+2026-07-19 08:19:25,307 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-19 08:19:25,308 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-19 08:19:25,312 - INFO - After removing duplicates: 4969 records
+2026-07-19 08:19:25,314 - INFO - After removing all-null rows: 4969 records
+2026-07-19 08:19:25,315 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 08:19:25,319 - INFO - Converted timestamp to datetime
+2026-07-19 08:19:25,321 - INFO - Converted date to datetime
+2026-07-19 08:19:25,325 - INFO - Converted Zone to numeric
+2026-07-19 08:19:25,329 - INFO - Converted Shift to numeric
+2026-07-19 08:19:25,329 - INFO - Transformation complete. Final records: 4969
+2026-07-19 08:19:25,329 - INFO - Starting data validation...
+2026-07-19 08:19:25,332 - INFO - Column Zone: min=nan, max=nan, mean=nan
+2026-07-19 08:19:25,332 - INFO - Column Shift: min=nan, max=nan, mean=nan
+2026-07-19 08:19:25,332 - INFO - Column Pressure_PSI: min=120.02963124727086, max=279.9586035612948, mean=200.14
+2026-07-19 08:19:25,333 - INFO - Column Temperature_C: min=45.004745796434, max=84.99570666820196, mean=64.93
+2026-07-19 08:19:25,333 - INFO - Column Flow_Rate_LPM: min=600.0074367804677, max=1399.755865096956, mean=999.61
+2026-07-19 08:19:25,333 - INFO - Validation checks completed
+2026-07-19 08:19:25,333 - INFO - Starting load...
+2026-07-19 08:19:25,390 - INFO - Table cleared and loaded with 4969 records
+2026-07-19 08:19:25,390 - INFO - Load completed successfully
+2026-07-19 08:19:25,390 - INFO - Pipeline completed successfully
+2026-07-19 08:19:25,390 - INFO - Total records processed: 4969
+2026-07-19 08:19:25,390 - INFO - Execution time: 0:00:00.115022
+2026-07-19 08:19:25,390 - INFO - ==================================================
+2026-07-19 08:48:07,749 - INFO - ==================================================
+2026-07-19 08:48:07,749 - INFO - Pipeline started at 2026-07-19 08:48:07.749588
+2026-07-19 08:48:07,751 - INFO - Loaded environment variables
+2026-07-19 08:48:07,751 - INFO - Starting extraction...
+2026-07-19 08:48:07,751 - INFO - Found file at: D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:48:07,769 - INFO - Extracted 4969 records from D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:48:07,769 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 08:48:07,769 - INFO - Starting transformation...
+2026-07-19 08:48:07,769 - INFO - Original data shape: (4969, 11)
+2026-07-19 08:48:07,787 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-19 08:48:07,788 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-19 08:48:07,793 - INFO - After removing duplicates: 4969 records
+2026-07-19 08:48:07,795 - INFO - After removing all-null rows: 4969 records
+2026-07-19 08:48:07,797 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 08:48:07,804 - INFO - Converted timestamp to datetime
+2026-07-19 08:48:07,809 - INFO - Converted date to datetime
+2026-07-19 08:48:07,817 - INFO - Converted Zone to numeric
+2026-07-19 08:48:07,821 - INFO - Converted Shift to numeric
+2026-07-19 08:48:07,821 - INFO - Transformation complete. Final records: 4969
+2026-07-19 08:48:07,822 - INFO - Starting data validation with Great Expectations...
+2026-07-19 08:48:07,870 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values']
+2026-07-19 08:48:07,870 - ERROR - \u274c Validation failed for rules: ['First column is text type']
+2026-07-19 08:48:07,871 - CRITICAL - Pipeline halted due to validation failures
+2026-07-19 08:48:33,446 - INFO - ==================================================
+2026-07-19 08:48:33,446 - INFO - Pipeline started at 2026-07-19 08:48:33.446227
+2026-07-19 08:48:33,447 - INFO - Loaded environment variables
+2026-07-19 08:48:33,447 - INFO - Starting extraction...
+2026-07-19 08:48:33,447 - INFO - Found file at: D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:48:33,459 - INFO - Extracted 4969 records from D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:48:33,460 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 08:48:33,460 - INFO - Starting transformation...
+2026-07-19 08:48:33,460 - INFO - Original data shape: (4969, 11)
+2026-07-19 08:48:33,472 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-19 08:48:33,473 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-19 08:48:33,477 - INFO - After removing duplicates: 4969 records
+2026-07-19 08:48:33,478 - INFO - After removing all-null rows: 4969 records
+2026-07-19 08:48:33,480 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 08:48:33,484 - INFO - Converted timestamp to datetime
+2026-07-19 08:48:33,486 - INFO - Converted date to datetime
+2026-07-19 08:48:33,490 - INFO - Converted Zone to numeric
+2026-07-19 08:48:33,494 - INFO - Converted Shift to numeric
+2026-07-19 08:48:33,494 - INFO - Transformation complete. Final records: 4969
+2026-07-19 08:48:33,494 - INFO - Starting data validation with Great Expectations...
+2026-07-19 08:48:33,499 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values']
+2026-07-19 08:48:33,499 - ERROR - \u274c Validation failed for rules: ['First column is text type']
+2026-07-19 08:48:33,499 - CRITICAL - Pipeline halted due to validation failures
+2026-07-19 08:57:52,499 - INFO - ==================================================
+2026-07-19 08:57:52,499 - INFO - Pipeline started at 2026-07-19 08:57:52.499257
+2026-07-19 08:57:52,500 - INFO - Loaded environment variables
+2026-07-19 08:57:52,500 - INFO - Starting extraction...
+2026-07-19 08:57:52,500 - INFO - Found file at: D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:57:52,513 - INFO - Extracted 4969 records from D:/EMTECH/PLP/Week 3/final_integrated_pipeline_data.csv
+2026-07-19 08:57:52,513 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 08:57:52,513 - INFO - Starting transformation...
+2026-07-19 08:57:52,513 - INFO - Original data shape: (4969, 11)
+2026-07-19 08:57:52,525 - INFO - First few rows:
+             timestamp          Zone  ... precipitation_mm  scheduled_staff_count
+0  2026-06-25 00:00:00     Zone_West  ...              0.0                      1
+1  2026-06-25 00:02:00  Zone_Central  ...              0.0                      1
+2  2026-06-25 00:04:00     Zone_East  ...              0.0                      1
+3  2026-06-25 00:06:00  Zone_Central  ...              0.0                      1
+4  2026-06-25 00:08:00  Zone_Central  ...              0.0                      1
+
+[5 rows x 11 columns]
+2026-07-19 08:57:52,526 - INFO - Data types:
+timestamp                    str
+Zone                         str
+Shift                        str
+Pressure_PSI             float64
+Temperature_C            float64
+Flow_Rate_LPM            float64
+date                         str
+ambient_temp_C           float64
+humidity_pct               int64
+precipitation_mm         float64
+scheduled_staff_count      int64
+dtype: object
+2026-07-19 08:57:52,531 - INFO - After removing duplicates: 4969 records
+2026-07-19 08:57:52,532 - INFO - After removing all-null rows: 4969 records
+2026-07-19 08:57:52,533 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 08:57:52,537 - INFO - Converted timestamp to datetime
+2026-07-19 08:57:52,539 - INFO - Converted date to datetime
+2026-07-19 08:57:52,543 - INFO - Converted Zone to numeric
+2026-07-19 08:57:52,547 - INFO - Converted Shift to numeric
+2026-07-19 08:57:52,547 - INFO - Transformation complete. Final records: 4969
+2026-07-19 08:57:52,547 - INFO - Starting data validation with Great Expectations...
+2026-07-19 08:57:52,552 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values']
+2026-07-19 08:57:52,552 - ERROR - \u274c Validation failed for rules: ['First column is text type']
+2026-07-19 08:57:52,552 - CRITICAL - Pipeline halted due to validation failures
+2026-07-19 09:23:31,216 - INFO - ==================================================
+2026-07-19 09:23:31,216 - INFO - Pipeline started at 2026-07-19 09:23:31.216363
+2026-07-19 09:23:31,217 - INFO - Loaded environment variables
+2026-07-19 09:23:31,217 - INFO - Starting extraction...
+2026-07-19 09:23:31,232 - INFO - Extracted 4969 records from D:\EMTECH\PLP\Week 3\final_integrated_pipeline_data.csv
+2026-07-19 09:23:31,232 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 09:23:31,232 - INFO - Starting transformation...
+2026-07-19 09:23:31,233 - INFO - Original data shape: (4969, 11)
+2026-07-19 09:23:31,237 - INFO - After removing duplicates: 4969 records
+2026-07-19 09:23:31,238 - INFO - After removing all-null rows: 4969 records
+2026-07-19 09:23:31,240 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 09:23:31,245 - INFO - Converted timestamp to datetime
+2026-07-19 09:23:31,247 - INFO - Converted date to datetime
+2026-07-19 09:23:31,251 - INFO - Converted Zone to numeric
+2026-07-19 09:23:31,254 - INFO - Converted Shift to numeric
+2026-07-19 09:23:31,255 - INFO - Transformation complete. Final records: 4969
+2026-07-19 09:23:31,255 - INFO - Starting data validation with Great Expectations...
+2026-07-19 09:23:31,261 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values']
+2026-07-19 09:23:31,261 - ERROR - \u274c Validation failed for rules: ['First column is text type']
+2026-07-19 09:23:31,261 - CRITICAL - Pipeline halted due to validation failures
+2026-07-19 09:24:01,402 - INFO - ==================================================
+2026-07-19 09:24:01,402 - INFO - Pipeline started at 2026-07-19 09:24:01.402281
+2026-07-19 09:24:01,403 - INFO - Loaded environment variables
+2026-07-19 09:24:01,403 - INFO - Starting extraction...
+2026-07-19 09:24:01,416 - INFO - Extracted 4969 records from D:\EMTECH\PLP\Week 3\final_integrated_pipeline_data.csv
+2026-07-19 09:24:01,416 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 09:24:01,417 - INFO - Starting transformation...
+2026-07-19 09:24:01,417 - INFO - Original data shape: (4969, 11)
+2026-07-19 09:24:01,421 - INFO - After removing duplicates: 4969 records
+2026-07-19 09:24:01,422 - INFO - After removing all-null rows: 4969 records
+2026-07-19 09:24:01,423 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 09:24:01,429 - INFO - Converted timestamp to datetime
+2026-07-19 09:24:01,431 - INFO - Converted date to datetime
+2026-07-19 09:24:01,435 - INFO - Converted Zone to numeric
+2026-07-19 09:24:01,439 - INFO - Converted Shift to numeric
+2026-07-19 09:24:01,439 - INFO - Transformation complete. Final records: 4969
+2026-07-19 09:24:01,439 - INFO - Starting data validation with Great Expectations...
+2026-07-19 09:24:01,445 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values']
+2026-07-19 09:24:01,445 - ERROR - \u274c Validation failed for rules: ['First column is text type']
+2026-07-19 09:24:01,446 - CRITICAL - Pipeline halted due to validation failures
+2026-07-19 09:40:38,935 - INFO - ==================================================
+2026-07-19 09:40:38,935 - INFO - Pipeline started at 2026-07-19 09:40:38.935803
+2026-07-19 09:40:38,944 - INFO - Loaded environment variables
+2026-07-19 09:40:38,944 - INFO - Starting extraction...
+2026-07-19 09:40:38,966 - INFO - Extracted 4969 records from D:\EMTECH\PLP\Week 3\final_integrated_pipeline_data.csv
+2026-07-19 09:40:38,966 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 09:40:38,966 - INFO - Starting transformation...
+2026-07-19 09:40:38,967 - INFO - Original data shape: (4969, 11)
+2026-07-19 09:40:38,971 - INFO - After removing duplicates: 4969 records
+2026-07-19 09:40:38,973 - INFO - After removing all-null rows: 4969 records
+2026-07-19 09:40:38,975 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 09:40:38,979 - INFO - Converted timestamp to datetime
+2026-07-19 09:40:38,981 - INFO - Converted date to datetime
+2026-07-19 09:40:38,985 - INFO - Converted Zone to numeric
+2026-07-19 09:40:38,990 - INFO - Converted Shift to numeric
+2026-07-19 09:40:38,990 - INFO - Transformation complete. Final records: 4969
+2026-07-19 09:40:38,991 - INFO - Starting data validation with Great Expectations...
+2026-07-19 09:40:38,999 - INFO - \u2705 Timestamp column validated: 4969/4969 records have valid dates
+2026-07-19 09:40:38,999 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values', 'Timestamp column has valid dates']
+2026-07-19 09:40:38,999 - INFO - \u2705 All validation rules passed!
+2026-07-19 09:40:39,000 - INFO - Starting load...
+2026-07-19 09:40:39,046 - INFO - Table cleared and loaded with 4969 records
+2026-07-19 09:40:39,046 - INFO - Load completed successfully
+2026-07-19 09:40:39,046 - INFO - Pipeline completed successfully
+2026-07-19 09:40:39,046 - INFO - Total records processed: 4969
+2026-07-19 09:40:39,046 - INFO - Execution time: 0:00:00.110975
+2026-07-19 09:40:39,046 - INFO - ==================================================
+2026-07-19 09:43:29,105 - INFO - ==================================================
+2026-07-19 09:43:29,105 - INFO - Pipeline started at 2026-07-19 09:43:29.105804
+2026-07-19 09:43:29,106 - INFO - Loaded environment variables
+2026-07-19 09:43:29,107 - INFO - Starting extraction...
+2026-07-19 09:43:29,120 - INFO - Extracted 4969 records from D:\EMTECH\PLP\Week 3\final_integrated_pipeline_data.csv
+2026-07-19 09:43:29,120 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 09:43:29,121 - INFO - Starting transformation...
+2026-07-19 09:43:29,121 - INFO - Original data shape: (4969, 11)
+2026-07-19 09:43:29,125 - INFO - After removing duplicates: 4969 records
+2026-07-19 09:43:29,126 - INFO - After removing all-null rows: 4969 records
+2026-07-19 09:43:29,128 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 09:43:29,133 - INFO - Converted timestamp to datetime
+2026-07-19 09:43:29,136 - INFO - Converted date to datetime
+2026-07-19 09:43:29,139 - INFO - Converted Zone to numeric
+2026-07-19 09:43:29,145 - INFO - Converted Shift to numeric
+2026-07-19 09:43:29,145 - INFO - Transformation complete. Final records: 4969
+2026-07-19 09:43:29,146 - INFO - Starting data validation with Great Expectations...
+2026-07-19 09:43:29,157 - INFO - \u2705 Timestamp column validated: 4969/4969 records have valid dates
+2026-07-19 09:43:29,157 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values', 'Timestamp column has valid dates']
+2026-07-19 09:43:29,157 - INFO - \u2705 All validation rules passed!
+2026-07-19 09:43:29,157 - INFO - Starting load...
+2026-07-19 09:43:29,202 - INFO - Table cleared and loaded with 4969 records
+2026-07-19 09:43:29,202 - INFO - Load completed successfully
+2026-07-19 09:43:29,203 - INFO - Pipeline completed successfully
+2026-07-19 09:43:29,203 - INFO - Total records processed: 4969
+2026-07-19 09:43:29,203 - INFO - Execution time: 0:00:00.097178
+2026-07-19 09:43:29,203 - INFO - ==================================================
+2026-07-19 11:02:20,576 - INFO - ==================================================
+2026-07-19 11:02:20,577 - INFO - Pipeline started at 2026-07-19 11:02:20.577255
+2026-07-19 11:02:20,578 - INFO - Loaded environment variables
+2026-07-19 11:02:20,579 - INFO - Starting extraction...
+2026-07-19 11:02:20,634 - INFO - Extracted 4969 records from D:\EMTECH\PLP\Week 3\final_integrated_pipeline_data.csv
+2026-07-19 11:02:20,635 - INFO - Columns found: ['timestamp', 'Zone', 'Shift', 'Pressure_PSI', 'Temperature_C', 'Flow_Rate_LPM', 'date', 'ambient_temp_C', 'humidity_pct', 'precipitation_mm', 'scheduled_staff_count']
+2026-07-19 11:02:20,636 - INFO - Starting transformation...
+2026-07-19 11:02:20,636 - INFO - Original data shape: (4969, 11)
+2026-07-19 11:02:20,657 - INFO - After removing duplicates: 4969 records
+2026-07-19 11:02:20,658 - INFO - After removing all-null rows: 4969 records
+2026-07-19 11:02:20,665 - INFO - After removing null in timestamp: 4969 records
+2026-07-19 11:02:20,678 - INFO - Converted timestamp to datetime
+2026-07-19 11:02:20,682 - INFO - Converted date to datetime
+2026-07-19 11:02:20,690 - INFO - Converted Zone to numeric
+2026-07-19 11:02:20,693 - INFO - Converted Shift to numeric
+2026-07-19 11:02:20,694 - INFO - Transformation complete. Final records: 4969
+2026-07-19 11:02:20,694 - INFO - Starting data validation with Great Expectations...
+2026-07-19 11:02:20,709 - INFO - \u2705 Timestamp column validated: 4969/4969 records have valid dates
+2026-07-19 11:02:20,711 - INFO - Passed rules: ['No Null IDs', 'Unknown rule', 'Values within expected range', 'Table has reasonable number of rows', 'First column has unique values', 'Timestamp column has valid dates']
+2026-07-19 11:02:20,711 - INFO - \u2705 All validation rules passed!
+2026-07-19 11:02:20,711 - INFO - Starting load...
+2026-07-19 11:02:20,773 - INFO - Table cleared and loaded with 4969 records
+2026-07-19 11:02:20,773 - INFO - Load completed successfully
+2026-07-19 11:02:20,773 - INFO - Pipeline completed successfully
+2026-07-19 11:02:20,773 - INFO - Total records processed: 4969
+2026-07-19 11:02:20,773 - INFO - Execution time: 0:00:00.196399
+2026-07-19 11:02:20,773 - INFO - ==================================================
